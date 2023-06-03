@@ -3,7 +3,7 @@
 由于某些未知原因，[FFXIVQuickLauncher](https://github.com/ottercorp/FFXIVQuickLauncher)禁止了一部分`Dalamud插件的加载`，本项目旨在解除这一限制。
 
 ### 使用方法
-> 注意事项：本项目目前需要配合 [UnbanPluginsCN](https://github.com/NightmareXIV/UnbanPluginsCN)这个项目一起使用，请保证在启动**FFXIVQuickLauncher**之前已经启用了`UnbanPluginsCN 2.0.0.0`
+> 注意事项：本项目目前需要配合 [UnbanPluginsCN](https://github.com/NightmareXIV/UnbanPluginsCN)这个项目一起使用，请保证在启动`FFXIVQuickLauncher`之前已经启用了`UnbanPluginsCN 2.0.0.0`
 > 您在本项目release页面中下载的安装包不包含`UnbanPluginsCN`，需要您自行下载。
 
 1. 保证`UnbanPluginsCN`已经启动。
