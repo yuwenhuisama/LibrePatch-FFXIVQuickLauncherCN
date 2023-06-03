@@ -34,7 +34,7 @@ public static class AssemblyHacker
             var op = il.Body.Instructions.FirstOrDefault(i =>
             {
                 return i.OpCode == OpCodes.Ldstr && i.Operand is string &&
-                       ((string)i.Operand) == "https://aonyx.ffxiv.wang/Dalamud/Asset/Meta";
+                       ((string)i.Operand) == Consts.MetaUrl;
             }, null);
     
             if (op == null)
