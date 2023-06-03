@@ -1,0 +1,9 @@
+{
+    "XIVLauncherBasePath": "D:/FFXIVLuncher/XIVLauncherCN",
+    "AssemblyName": "XIVLauncher.Common.dll",
+    "AssetManagerName": "AssetManager",
+    "MethodNameToRewrite": "CheckAssetRefreshNeeded",
+    "MetaUrl": "https://aonyx.ffxiv.wang/Dalamud/Asset/Meta",
+    "MockBaseUrl": "http://127.0.0.1",
+    "MockPort": 9999
+}

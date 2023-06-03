@@ -7,6 +7,10 @@
         <Nullable>enable</Nullable>
         <AssemblyName>LibrePatch</AssemblyName>
         <RootNamespace>LibrePatch</RootNamespace>
+        <Title>LibrePatch</Title>
+        <Company>Hui</Company>
+        <AssemblyVersion>1.0</AssemblyVersion>
+        <FileVersion>1.0</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>

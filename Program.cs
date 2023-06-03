@@ -1,8 +1,11 @@
 ﻿using LibrePatch;
 
+// Init constance.
+Consts.Init();
+
 // Rewrite assembly
 Console.WriteLine("Try to rewrite assembly...");
-foreach(var dirName in Directory.GetDirectories("./")) {
+foreach(var dirName in Directory.GetDirectories(Consts.XIVLauncherBasePath)) {
     if (dirName.Contains("app-"))
     {
         Console.WriteLine("Find target directory: {0}, try to rewrite assembly", dirName);
