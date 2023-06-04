@@ -25,6 +25,21 @@ public class Config
 
     [JsonPropertyName("XIVLauncherBasePath")]
     public string XIVLauncherBasePath { get; set; }
+    
+    [JsonPropertyName("DalamudAssemblyName")]
+    public string DalamudAssemblyName { get; set; }
+    
+    [JsonPropertyName("DalamudBaseDirectoryToScan")]
+    public string DalamudBaseDirectoryToScan { get; set; }
+    
+    [JsonPropertyName("PluginManagerName")]
+    public string PluginManagerName { get; set; }
+    
+    [JsonPropertyName("HackStrategyVersion")]
+    public int HackStrategyVersion { get; set; }
+    
+    [JsonPropertyName("AssetStoreUrlFieldName")]
+    public string AssetStoreUrlFieldName { get; set; }
 }
 
 public static class Consts
@@ -36,6 +51,12 @@ public static class Consts
     public static string MockBaseUrl = "http://127.0.0.1";
     public static int MockPort = 9999;
     public static string XIVLauncherBasePath = "./";
+    public static string AssetStoreUrlFieldName = "ASSET_STORE_URL";
+
+    public static string DalamudAssemblyName = "Dalamud.dll";
+    public static string DalamudBaseDirectoryToScan = "Roaming/addon/Hooks";
+    public static string PluginManagerName = "PluginManager";
+    public static int HackStrategyVersion = 2;
 
     public static string MockMetaUrl = $"{MockBaseUrl}:{MockPort}/Meta";
 
@@ -53,6 +74,12 @@ public static class Consts
             MockBaseUrl = confObj.MockBaseUrl;
             MockPort = confObj.MockPort;
             XIVLauncherBasePath = confObj.XIVLauncherBasePath;
+            AssetStoreUrlFieldName = confObj.AssetStoreUrlFieldName;
+
+            DalamudAssemblyName = confObj.DalamudAssemblyName;
+            DalamudBaseDirectoryToScan = confObj.DalamudBaseDirectoryToScan;
+            PluginManagerName = confObj.PluginManagerName;
+            HackStrategyVersion = confObj.HackStrategyVersion;
 
             MockMetaUrl = $"{MockBaseUrl}:{MockPort}/Meta";
         }

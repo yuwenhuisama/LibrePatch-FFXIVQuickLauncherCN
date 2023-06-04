@@ -1,9 +1,15 @@
 {
+    "HackStrategyVersion": 1,
     "XIVLauncherBasePath": "D:/FFXIVLuncher/XIVLauncherCN",
+
     "AssemblyName": "XIVLauncher.Common.dll",
     "AssetManagerName": "AssetManager",
     "MethodNameToRewrite": "CheckAssetRefreshNeeded",
+    "AssetStoreUrlFieldName": "ASSET_STORE_URL",
     "MetaUrl": "https://aonyx.ffxiv.wang/Dalamud/Asset/Meta",
     "MockBaseUrl": "http://127.0.0.1",
-    "MockPort": 9999
+    "MockPort": 9999,
+    "DalamudAssemblyName": "Dalamud.dll",
+    "DalamudBaseDirectoryToScan": "Roaming/addon/Hooks",
+    "PluginManagerName": "PluginManager"
 }
