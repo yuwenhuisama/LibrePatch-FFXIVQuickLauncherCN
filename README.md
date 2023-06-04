@@ -21,12 +21,14 @@
 3. 当在命令行窗口中看到`Start mock http server, you can safely close this window after injection completed.`字样时，此时您可以正常启动`FFXIVQuickLauncherCN`进入游戏。
 4. 当确认`Dalamud`插件已经正常加载后，可以手动关闭`libre-patch.bat`的命令行窗口。
 
+> 如果您想要紧急还原`LibrePatch`对`FFXIVQuickLauncherCN`的修改，可以在`FFXIVQuickLauncher根目录`下找到一系列以`app-`开头的文件夹，将每个文件夹里面的`XIVLauncher.Common.dll`删除，再将`XIVLauncher.Common.dll.bak`重命名为`XIVLauncher.Common.dll`即可。
+
 #### V2版本使用方法
 1. 右键以管理员权限运行`libre-patch.bat`，确认后回车，等待其运行。
 2. 当在命令行窗口中看到`Assembly rewrite completed, you can safely close this window.`字样时，此时您可以正常启动`FFXIVQuickLauncherCN`进入游戏。
 3. 如果发现`Dalamud`在更新后注入失效，可以重新运行`libre-patch.bat`来重新对Assembly打Patch。
 
-> 如果您想要紧急还原`LibrePatch`对`Dalamud`的修改，可以在`FFXIVQuickLauncher根目录/Roaming/addon/Hooks`目录下找到一系列文件夹，将每个文件夹里面的`Dalamud.dll`删除，再将`Dalamud.dll.bak`，将其重命名为`Dalamud.dll`即可。
+> 如果您想要紧急还原`LibrePatch`对`Dalamud`的修改，可以在`FFXIVQuickLauncher根目录/Roaming/addon/Hooks`目录下找到一系列文件夹，将每个文件夹里面的`Dalamud.dll`删除，再将`Dalamud.dll.bak`重命名为`Dalamud.dll`即可。
 
 ## English Description
 For some unknown reason, [FFXIVQuickLauncher](https://github.com/ottercorp/FFXIVQuickLauncher) has banned some `Dalamud` plugins, this project aims to remove this restriction.
@@ -44,6 +46,8 @@ Please note that currently `LibrePatch` supports two strategies to remove the re
 2. Right-click to run `libre-patch.bat` with administrator privileges, press enter after confirmation, and wait for it to run.
 3. When you see the words `Start mock http server, you can safely close this window after injection completed.` in the command line window, you can start `FFXIVQuickLauncherCN` normally to start the game.
 4. When you confirm that the `Dalamud` plugin has been loaded normally, you can manually close the command line window of `libre-patch.bat`.
+
+> If you want to urgently restore the modification from `LibrePatch` on `FFXIVQuickLauncherCN`, you can find a series of folders starting with `app-` in the `FFXIVQuickLauncher root directory`, delete the `XIVLauncher.Common.dll` in each folder, and then rename `XIVLauncher.Common.dll.bak` to `XIVLauncher.Common.dll`.
 
 #### V2 Version Usage
 1. Right-click to run `libre-patch.bat` with administrator privileges, press enter after confirmation, and wait for it to run.
