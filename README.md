@@ -24,7 +24,9 @@
 #### V2版本使用方法
 1. 右键以管理员权限运行`libre-patch.bat`，确认后回车，等待其运行。
 2. 当在命令行窗口中看到`Assembly rewrite completed, you can safely close this window.`字样时，此时您可以正常启动`FFXIVQuickLauncherCN`进入游戏。
-3. 如果发现`Dalamud`在更新后注入失效，可以重新运行`libre-patch.bat`来重新重写Assembly。
+3. 如果发现`Dalamud`在更新后注入失效，可以重新运行`libre-patch.bat`来重新对Assembly打Patch。
+
+> 如果您想要紧急还原`LibrePatch`对`Dalamud`的修改，可以在`FFXIVQuickLauncher根目录/Roaming/addon/Hooks`目录下找到一系列文件夹，将每个文件夹里面的`Dalamud.dll`删除，再将`Dalamud.dll.bak`，将其重命名为`Dalamud.dll`即可。
 
 ## English Description
 For some unknown reason, [FFXIVQuickLauncher](https://github.com/ottercorp/FFXIVQuickLauncher) has banned some `Dalamud` plugins, this project aims to remove this restriction.
@@ -46,4 +48,6 @@ Please note that currently `LibrePatch` supports two strategies to remove the re
 #### V2 Version Usage
 1. Right-click to run `libre-patch.bat` with administrator privileges, press enter after confirmation, and wait for it to run.
 2. When you see the words `Assembly rewrite completed, you can safely close this window.` in the command line window, you can start `FFXIVQuickLauncherCN` normally to start the game.
-3. If you find that injection is invalid after `Dalamud` updated, you can rerun `libre-patch.bat` to rewrite the Assembly.
+3. If you find that injection is invalid after `Dalamud` updated, you can rerun `libre-patch.bat` to re-patch the Assembly.
+
+> If you want to urgently restore the modification from `LibrePatch` on `Dalamud`, you can find a series of folders in the `FFXIVQuickLauncher root directory/Roaming/addon/Hooks` directory, delete the `Dalamud.dll` in each folder, and then rename `Dalamud.dll.bak` to `Dalamud.dll`.

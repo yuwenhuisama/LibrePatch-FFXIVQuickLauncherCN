@@ -1,5 +1,5 @@
 {
-    "HackStrategyVersion": 1,
+    "HackStrategyVersion": 2,
     "XIVLauncherBasePath": "D:/FFXIVLuncher/XIVLauncherCN",
 
     "AssemblyName": "XIVLauncher.Common.dll",

@@ -92,12 +92,23 @@ public static class AssemblyHacker
             Console.WriteLine("Find method to modify: {0}", targetMethod.Name);
 
             var il = targetMethod.Body.GetILProcessor();
-            var op = il.Body.Instructions.FirstOrDefault(i =>
+            var ops = il.Body.Instructions.Where(i =>
             {
                 return i.OpCode == OpCodes.Stfld && i.Operand is FieldReference &&
                        ((FieldReference)i.Operand).Name == "bannedPlugins";
-            }, null);
+            }).ToList();
 
+            if (ops.Count > 1)
+            {
+                var opPrev = ops[1].Previous;
+                if (opPrev.OpCode == OpCodes.Ldloc_3)
+                {
+                    Console.WriteLine("Already hacked");
+                    return;
+                }
+            }
+
+            var op = ops.Last();
             if (op == null)
             {
                 Console.WriteLine("Target OpCode Not found.");
@@ -122,6 +133,10 @@ public static class AssemblyHacker
     private static void BackupOriginAssembly(string assemblyPath)
     {
         Console.WriteLine("Backup original assembly file.");
+        if (File.Exists(assemblyPath + ".bak"))
+        {
+            File.Delete(assemblyPath + ".bak");
+        }
         File.Move(assemblyPath, assemblyPath + ".bak");
         File.Move(assemblyPath + ".TMP", assemblyPath);
         Console.WriteLine("Success to rewrite.");

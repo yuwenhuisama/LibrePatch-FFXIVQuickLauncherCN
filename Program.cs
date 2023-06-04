@@ -35,4 +35,5 @@ else
     }
 
     Console.WriteLine("Assembly rewrite completed, you can safely close this window.");
+    Console.ReadLine();
 }

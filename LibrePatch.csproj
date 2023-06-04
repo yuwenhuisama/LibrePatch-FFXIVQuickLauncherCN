@@ -18,10 +18,4 @@
       <PackageReference Include="Mono.Cecil" Version="0.11.5" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Reference Include="Dalamud">
-        <HintPath>D:\FFXIVLuncher\XIVLauncherCN\Roaming\addon\Hooks\7.5.1.12\Dalamud.dll</HintPath>
-      </Reference>
-    </ItemGroup>
-
 </Project>
