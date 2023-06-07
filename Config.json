@@ -2,6 +2,8 @@
     "HackStrategyVersion": 1,
     "XIVLauncherBasePath": "D:/FFXIVLuncher/XIVLauncherCN",
 
+    "LocalFileSystemBasePath": "./file",
+    "LocalCheatFileName": "cheatplugin.011262350f30f39ad448bd802e653a7067c10c072f42cd973c2302c65a5e2661.json",
     "AssemblyName": "XIVLauncher.Common.dll",
     "AssetManagerName": "AssetManager",
     "MethodNameToRewrite": "CheckAssetRefreshNeeded",
