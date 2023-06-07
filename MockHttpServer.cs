@@ -1,12 +1,12 @@
 ﻿namespace LibrePatch;
 
-using System.Net;
 using System.Net.Http.Json;
-using System.Net.Sockets;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json.Serialization;
 using EmbedIO;
 using EmbedIO.Actions;
+using EmbedIO.Files;
 using EmbedIO.Routing;
 using EmbedIO.WebApi;
 using JsonSerializer = System.Text.Json.JsonSerializer;
@@ -42,19 +42,33 @@ public static class MockHttpServer
             Console.WriteLine("Request Incoming, Hijack it.");
             using var client = new HttpClient();
             var res = await client.GetFromJsonAsync<AssetInfo>(Consts.MetaUrl);
-            res!.Assets.RemoveAll(asset =>
-                asset.FileName.Contains("bannedplugin") || asset.FileName.Contains("cheatplugin"));
+            // res!.Assets.RemoveAll(asset =>
+            //     asset.FileName.Contains("bannedplugin") || asset.FileName.Contains("cheatplugin"));
+            var cheatRes = res!.Assets.FirstOrDefault(asset => asset.FileName.Contains("cheatplugin"));
+            if (cheatRes != null)
+            {
+                using var sha1 = SHA1.Create();
+                using var file = File.OpenRead("./file/cheatplugin.011262350f30f39ad448bd802e653a7067c10c072f42cd973c2302c65a5e2661.json");
+                var fileHash = sha1.ComputeHash(file);
+                var stringHash = BitConverter.ToString(fileHash).Replace("-", "");
+                cheatRes.Url = Consts.LocalFakeCheatFileUrl;
+                cheatRes.Hash = stringHash;
+            }
             var json = JsonSerializer.Serialize(res);
             return json;
         }
     }
-
+    
     public static void Start()
     {
         using var httpServer = new WebServer(o =>
                 o.WithUrlPrefix($"{Consts.MockBaseUrl}:{Consts.MockPort}")
                     .WithMode(HttpListenerMode.EmbedIO))
             .WithLocalSessionManager()
+            .WithStaticFolder("/file", "./file", false, conf =>
+            {
+                conf.WithDirectoryLister(DirectoryLister.Html);
+            })
             .WithWebApi("/Meta", (async (context, data) =>
             {
                 context.Response.ContentType = "application/json";

@@ -24,16 +24,19 @@ if (Consts.HackStrategyVersion == 1)
 }
 else
 {
-    Console.WriteLine("Hack with v2 strategy.");
-    Console.WriteLine("Try to rewrite assembly...");
-    foreach (var dirName in Directory.GetDirectories(Path.Combine(Consts.XIVLauncherBasePath,
-                 Consts.DalamudBaseDirectoryToScan)))
-    {
-        Console.WriteLine("Find target directory: {0}, try to rewrite assembly", dirName);
-        AssemblyHacker.HackV2(dirName);
-        Console.WriteLine("Succeeded to rewrite assembly.");
-    }
-
-    Console.WriteLine("Assembly rewrite completed, you can safely close this window.");
-    Console.ReadLine();
+    Console.WriteLine("V2 strategy could not be used in this version.");
 }
+// {
+//     Console.WriteLine("Hack with v2 strategy.");
+//     Console.WriteLine("Try to rewrite assembly...");
+//     foreach (var dirName in Directory.GetDirectories(Path.Combine(Consts.XIVLauncherBasePath,
+//                  Consts.DalamudBaseDirectoryToScan)))
+//     {
+//         Console.WriteLine("Find target directory: {0}, try to rewrite assembly", dirName);
+//         AssemblyHacker.HackV2(dirName);
+//         Console.WriteLine("Succeeded to rewrite assembly.");
+//     }
+//
+//     Console.WriteLine("Assembly rewrite completed, you can safely close this window.");
+//     Console.ReadLine();
+// }

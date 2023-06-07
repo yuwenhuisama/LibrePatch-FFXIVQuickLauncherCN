@@ -48,6 +48,9 @@ public static class Consts
     public static string AssetManagerFullName = "AssetManager";
     public static string MethodNameToRewrite = "CheckAssetRefreshNeeded";
     public static string MetaUrl = "https://aonyx.ffxiv.wang/Dalamud/Asset/Meta";
+
+    public static string LocalFakeCheatFileUrl =
+        "http://127.0.0.1:9999/file/cheatplugin.011262350f30f39ad448bd802e653a7067c10c072f42cd973c2302c65a5e2661.json";
     public static string MockBaseUrl = "http://127.0.0.1";
     public static int MockPort = 9999;
     public static string XIVLauncherBasePath = "./";
