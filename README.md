@@ -38,8 +38,8 @@
 For some unknown reason, [FFXIVQuickLauncher](https://github.com/ottercorp/FFXIVQuickLauncher) has banned some `Dalamud` plugins, this project aims to remove this restriction.
 
 ### Usage
-> Note: This project currently needs to be used with [UnbanPluginsCN](https://github.com/NightmareXIV/UnbanPluginsCN), Please make sure that `UnbanPluginsCN` has been enabled before starting **FFXIVQuickLauncher**.
-> The installation package you downloaded in the release page of this project does not include `UnbanPluginsCN`, you need to download it yourself.
+> ~~Note: This project currently needs to be used with [UnbanPluginsCN](https://github.com/NightmareXIV/UnbanPluginsCN), Please make sure that `UnbanPluginsCN` has been enabled before starting **FFXIVQuickLauncher**.
+> The installation package you downloaded in the release page of this project does not include `UnbanPluginsCN`, you need to download it yourself.~~
 
 ~~Please note that currently `LibrePatch` supports two strategies to remove the restriction of `FFXIVQuickLauncher` on `Dalamud` plugins, which are `v1` version and `v2` version. You can modify it in the `HackStrategyVersion` field in `Config.json`. If it is set to `1`, the `v1` version will be enabled, and if it is set to `2`, the `v2` version will be enabled. Each version has its own advantages and disadvantages, you can choose according to your needs. The differences are as follows:~~
 - The `v1` version intercepts the request of `FFXIVQuickLauncher` to pull the remote plugin list, replaces the URL of the relevant request with the local URL, and filters the relevant fields in the request through the local server, thereby removing the restriction of the plugin being banned. The advantage of this approach is that it is relatively stable, ~~but it needs to be used with `UnbanPlugingsCN`~~, and `LibrePatch` needs to be started before starting `FFXIVQuickLauncher` to ensure that the local server has been pulled up.
